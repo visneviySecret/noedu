@@ -3,8 +3,8 @@
         <Block_08 />
         <Block_09 />    
         <div class="pages-slider container">
-            <router-link :to="{name: 'ideas-war'}">Предыдущая статья</router-link>
-            <router-link :to="{name: 'save-yourself'}">Следующая статья</router-link>
+            <router-link :to="{name: 'save-yourself'}">Предыдущая статья</router-link>
+            <router-link :to="{name: 'ideas-war'}">Следующая статья</router-link>
         </div>
     </div>
 

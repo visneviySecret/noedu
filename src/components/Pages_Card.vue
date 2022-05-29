@@ -4,9 +4,9 @@
                 appear
                 @before-enter="beforeEnter"
                 @enter="enter">
-            <div class="pages-card-title">
-                {{ data.title }}
-            </div>
+            <div class="pages-card-title" v-html="data.title"></div>
+
+                <!-- {{ data.title }} -->
         </transition>
 
         <transition

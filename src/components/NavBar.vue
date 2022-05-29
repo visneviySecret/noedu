@@ -18,7 +18,6 @@
                             v-bind:key="title.id"
                             @check-active="checkActive"
                             />
-
                         <img src="@/assets/images/logo.png" class="header__logo"  alt="logo">
                         
                         <NavBarItem 
@@ -50,11 +49,29 @@ export default {
             ],
             show: false,
             isActive: false,
-        }
+            width: document.documentElement.clientWidth,
+        mounted() {
+          window.addEventListener('resize', this.getDimensions);
+        },
+        unmounted() {
+          window.removeEventListener('resize', this.getDimensions);
+        },
+    }
     },
     methods: {
+        getDimensions(e) {
+            this.width = document.documentElement.clientWidth;
+            if(e.targer.innerWidth > 768 ) {
+                
+                this.isActive = false
+                document.body.classList.remove('active')  
+                console.log(this.isActive, this.width);
+            }},
         myFilter() {
             this.isActive = !this.isActive;
+            this.size = document.documentElement.clientWidth;
+            
+
 
             if (this.isActive) {
                 document.body.classList.add('active')
@@ -66,6 +83,10 @@ export default {
             if (this.isActive) {
                 this.myFilter ()
             }
+        },
+        elem () {
+
+            
         }
     },
     components: {

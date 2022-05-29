@@ -8,7 +8,7 @@
                 @after-enter="afterEnter">
                 <div class="top-picture">
 
-                        <img class="top-picture__img" src="../assets/images/Mask_Group.png" alt="">
+                        <img class="top-picture__img" src="../assets/images/lighthouse.svg" alt="">
                 </div>
             </transition>
 
