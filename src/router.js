@@ -61,7 +61,7 @@ const routes = [
     },
     {
         path: '/blog',
-        beforeEnter() { location.href = 'https://noeduru.tumblr.com/' },
+        beforeEnter() { location.href = 'https://noedu.tumblr.com/' },
     },
     {
         path: '/website',
